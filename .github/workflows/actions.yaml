@@ -9,6 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Checking env variables
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+
       - name: simple js action
         id: greet
         uses: actions/hello-world-javascript-action@v1
